@@ -35,7 +35,7 @@ text-align: center;
 
 }
 
-.timeline li:before{
+.consulta ul li:before{
   background-color: #1B5C7C;
   border-radius: 50%;
   width: 5px;
@@ -50,7 +50,7 @@ text-align: center;
 }
 
 
-.timeline li:after{
+.consulta ul li:after{
   content: "";
   position: absolute;
   width: 100%;
@@ -62,19 +62,8 @@ text-align: center;
   transition: all ease-in-out .3s;
 }
 
-.timeline li:first-child:after{
+.consulta ul li:first-child:after{
   content: none;
-}
-.timeline li.active-tl{
-  color: pink;
-}
-.timeline li.active-tl:before{
-  background: pink;
-  color: purple;
-}
-
-.timeline li.active-tl + li:after{
-  background: green;
 }
 
 form, .card{
