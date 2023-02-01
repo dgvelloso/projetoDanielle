@@ -1,0 +1,8 @@
+{
+
+  "funcionarios": [
+    { "cpf": "11122233344" , "nome": "Mariana", "situacao": "Regular", "contaAplicacao": "557932-4", "contaCorrente": "778461-8" },
+    { "cpf": "01102203304", "nome": "Eduardo", "situacao": "Suspenso", "contaAplicacao": "4588541-2", "contaCorrente": "445569-3" },
+    { "cpf": "12302203304", "nome": "Iury", "situacao": "Regular", "contaAplicacao": "7823665-1", "contaCorrente": "485126-7" }
+  ]
+  }

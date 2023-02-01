@@ -1,0 +1,79 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-12 consulta">
+
+      <ul class="">
+        <li> <p> Início </p> </li>
+        <li> <p> Documentos </p> </li>
+        <li> <p> Dados Cadastrais </p> </li>
+        <li> <p> Admissão </p> </li>
+      </ul>
+
+          <form [formGroup]="cpfForm">
+             <h3>  Informe o CPF do futuro colaborador</h3>
+            <p> Se necessário, você poderá duplicar uma conta existente ou pausar e retormar este cadastro futuramente.</p>
+            <p> Digite apenas os números (sem pontos ou traços).</p>
+            <p>CPF</p>
+                <input  matInput
+                placeholder="000.000.000-00"
+                mask="000.000.000-00"
+                formControlName="cpf"
+                required
+                (keyup.enter)="validaCpf($event)"
+                (change)="validaCpf($event)">
+              <button  [ngClass]="{'isDisabled' : isDisabled === false}" mat-button (click)="getFormulario()" >Consultar CPF</button>
+          </form>
+
+        <!--////////////////////////////////////-->
+
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="card" *ngIf="isValid === true">
+            <div class="card-body">
+              <h5 class="card-title"> Situação cadastral do CPF</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Consulta na Receita Federal</h6>
+              <div class="card-text" *ngFor="let funcionario of resultPesquisa">
+                <p> <i class='bx bxs-user'></i> Nome: </p>
+                <p> {{funcionario.nome}}</p>
+                <p> <i class='bx bx-check-circle'></i> Situação do CPF: </p>
+                <p> {{funcionario.situacao}} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--////////////-->
+
+          <div class="col-12 col-md-4">
+            <div class="card" *ngIf="isValid === true">
+              <div class="card-body">
+                <h5 class="card-title"> Conta Aplicação</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cooperativa Viacredi</h6>
+                <div class="card-text" *ngFor="let funcionario of resultPesquisa">
+                  <p> <i class='bx bxs-user'></i> Número da conta: </p>
+                  <p> {{funcionario.contaAplicacao}}</p>
+                  <a href=""> duplicar conta</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--////////////-->
+
+        <div class="col-12 col-md-4 ">
+            <div class="card" *ngIf="isValid === true">
+              <div class="card-body">
+                <h5 class="card-title"> Conta corrente</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cooperativa Viacredi</h6>
+                <div class="card-text" *ngFor="let funcionario of resultPesquisa">
+                  <p> <i class='bx bxs-user'></i> Número da conta: </p>
+                  <p> {{funcionario.contaCorrente}}</p>
+                  <a href=""> duplicar conta</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
