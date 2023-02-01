@@ -57,7 +57,7 @@ text-align: center;
   height: 1px;
   background-color: #1B5C7C;
   top: 5px;
-  left: -65%;
+  left: -60%;
   z-index: -999;
   transition: all ease-in-out .3s;
 }
