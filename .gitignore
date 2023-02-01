@@ -32,11 +32,13 @@ chrome-profiler-events*.json
 
 # misc
 /.sass-cache
+/.angular
 /connect.lock
 /coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
+package-lock.json
 testem.log
 /typings
 
