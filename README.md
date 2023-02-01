@@ -1,27 +1,31 @@
-# ProjetoAgenda
+# ProjetoDanielle
+Projeto desenvolvido em [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## Clonando o código
+1. Clone o código fonte: 
+`git clone https://github.com/dgvelloso/projetoDanielle`
 
-## Development server
+2. Instale as dependências. 
+`npm install`
+OBS: Verifique a versão do node no arquivo package.json .
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+3. Rode localmente:
 
-## Code scaffolding
+ `ng serve` ou `npm start` 
+ 
+ Oba, código rodando! Abra o navegador em `http://localhost:4200/consulta-cpf`. 
+ A aplicação irá recompilar automaticamente após qualquer alteração no código.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Documentação
 
-## Build
+É necessário rodar `json-server --watch db.json`para ter acesso ao mock server no `http://localhost:3000/funcionarios`e gerar a 'API fake' com dados a serem consultados.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para consulta de cpf utilize: "11122233344"; "01102203304" ou "12302203304".
 
-## Running unit tests
+## Testes unitários
+Os testes unitários são escritos em Jasmine e compilador por [Karma](https://karma-runner.github.io).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Rode `ng test` para executar os testes via [Karma]
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Ajuda
+Para obter ajuda, rode `ng help` no seu terminal de comando ou acesse a página [Angular CLI Overview and Command Reference](https://angular.io/cli).

@@ -1,25 +1,14 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
+import {ConsultaCpfComponent} from 'src/app/consulta-cpf/consulta-cpf.component';
 
-//importando os componentes..
-import { PaginaInicialComponent } from "./pagina-inicial/pagina-inicial.component";
-import { CadastroTarefasComponent } from "./cadastro-tarefas/cadastro-tarefas.component";
-import { ConsultaTarefasComponent } from "./consulta-tarefas/consulta-tarefas.component";
-import { EdicaoTarefasComponent } from "./edicao-tarefas/edicao-tarefas.component";
-
-//mapeamento de rotas para cada componente..
-const routes: Routes = [
-    { path: '', component: PaginaInicialComponent },
-    { path: 'cadastro-tarefas', component: CadastroTarefasComponent },
-    { path: 'consulta-tarefas', component: ConsultaTarefasComponent },
-    { path: 'edicao-tarefas/:id', component: EdicaoTarefasComponent }
+const routes : Routes = [
+  { path : 'consulta-cpf', component: ConsultaCpfComponent },
 ];
 
-//registrando o mapeamento para que seja incluido no 'app.module'
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 
-//gerando uma classe para exportar toda a configuração
 export class AppRoutingModule { }
